@@ -64,7 +64,9 @@ def hello(name)
 end
 
 def starts_with_consonant?(s)
+  # Regex here checks if the first item is an alpha (letter).
   if s[0] =~ /[[:alpha:]]/
+    # Regex here checks if the first item is NOT a vowel.
     if s[0] !~/[[aeiouAEIOU]]/
       return true
     end
@@ -100,6 +102,7 @@ class BookInStock
   
   
   def price_as_string
+    # Uses string formatter to convert price to two decimal points. Adds a $. 
     return "$" + '%.2f' % @price
   end
   
